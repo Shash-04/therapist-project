@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind utilities;
+
+
+/* Dr. Serena Blake Therapist Website Design System
+Inspired by drjenniferhahm.com - soft, muted, professional aesthetic
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Soft, muted palette inspired by the reference site */
+    --background: 34 28% 97%;  /* Warm off-white */
+    --foreground: 210 15% 25%;  /* Soft charcoal */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 25%;
+
+    /* Calm, earthy primary - sage green inspired */
+    --primary: 158 25% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft beige/cream secondary */
+    --secondary: 42 30% 92%;
+    --secondary-foreground: 210 15% 25%;
+
+    /* Muted warm grays */
+    --muted: 30 15% 94%;
+    --muted-foreground: 210 12% 55%;
+
+    /* Soft blush accent */
+    --accent: 15 20% 90%;
+    --accent-foreground: 210 15% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 158 25% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom therapist-specific tokens */
+    --hero-overlay: 210 15% 25% / 0.3;
+    --section-bg: 42 35% 96%;
+    --soft-shadow: 210 15% 25% / 0.08;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 15% 15%;
+    --foreground: 34 28% 95%;
+
+    --card: 210 15% 18%;
+    --card-foreground: 34 28% 95%;
+
+    --popover: 210 15% 18%;
+    --popover-foreground: 34 28% 95%;
+
+    --primary: 158 30% 55%;
+    --primary-foreground: 210 15% 15%;
+
+    --secondary: 210 15% 22%;
+    --secondary-foreground: 34 28% 95%;
+
+    --muted: 210 15% 22%;
+    --muted-foreground: 210 12% 65%;
+
+    --accent: 210 15% 25%;
+    --accent-foreground: 34 28% 95%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 25%;
+    --input: 210 15% 25%;
+    --ring: 158 30% 55%;
+    
+    --hero-overlay: 0 0% 0% / 0.4;
+    --section-bg: 210 15% 18%;
+    --soft-shadow: 0 0% 0% / 0.2;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .hero-section {
+    background-image: linear-gradient(rgba(210, 15%, 25%, 0.3), rgba(210, 15%, 25%, 0.3));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .soft-shadow {
+    box-shadow: 0 10px 25px -5px hsl(var(--soft-shadow));
+  }
+
+  .section-padding {
+    @apply py-16 px-6 sm:py-20 sm:px-8;
+  }
+
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+}
